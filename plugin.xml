@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-getApi" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+<name>getApi</name>
+<js-module name="getApi" src="www/getApi.js">
+<clobbers target="cordova.plugins"/>
+</js-module>
+<platform name="android">
+<config-file parent="/*" target="res/xml/config.xml">
+<feature name="responseApi"><param name="android-package" value="cordova.plugin.getApi.getApi" /></feature></config-file>
+<config-file parent="/*" target="AndroidManifest.xml">
+</config-file>
+<source-file src="src/android/getApi.java" target-dir="src/cordova/plugin/getApi"/>
+<source-file src="src/android/ResponseData.java" target-dir="src/cordova/plugin/getApi"/>
+</platform>
+</plugin>
